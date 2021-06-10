@@ -2,7 +2,5 @@ cz/educanet/gui/Game.java
  cz.educanet.gui.Game
 cz/educanet/Main.java
  cz.educanet.Main
-cz/educanet/gui/RoomController.java
- cz.educanet.gui.RoomController
-cz/educanet/gui/MenuController.java
- cz.educanet.gui.MenuController
+cz/educanet/logic/Controller.java
+ cz.educanet.logic.Controller

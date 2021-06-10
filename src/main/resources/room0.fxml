@@ -4,9 +4,13 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -48,41 +52,63 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="897.0" style="-fx-background-color: #1c1c1c;" VBox.vgrow="ALWAYS">
             <children>
-            <Button layoutX="390.0" layoutY="472.0" mnemonicParsing="false" onAction="#enterDungeon" prefHeight="52.0" prefWidth="395.0" text="Enter the Dungeon">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
-            <Button layoutX="390.0" layoutY="537.0" mnemonicParsing="false" onAction="#returnToMenu" prefHeight="52.0" prefWidth="395.0" text="Return to Main Menu">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
-            <Pane layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="281.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+                <Pane layoutX="27.0" layoutY="84.0" prefHeight="335.0" prefWidth="909.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="#d33333" layoutX="5.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character Screen" textAlignment="CENTER" wrappingWidth="270.13671875">
+                  <ImageView fitHeight="320.0" fitWidth="481.0" layoutX="214.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/rooms/dungeonentrace.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+                <Pane layoutX="985.0" layoutY="201.0" prefHeight="170.0" prefWidth="170.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <ImageView fitHeight="170.0" fitWidth="170.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@img/adventurer.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+                <ProgressBar layoutX="893.0" layoutY="274.0" prefHeight="25.0" prefWidth="177.0" progress="1.0" rotate="-90.0" />
+                <Line endX="-100.0" endY="642.0" layoutX="1052.0" layoutY="26.0" startX="-100.0" stroke="#2a2a2a" />
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="308.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <Text fill="#d33333" layoutX="6.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dungeon Entrance" textAlignment="CENTER" wrappingWidth="295.13671875">
                      <font>
                         <Font name="Times New Roman" size="38.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-            <Pane layoutX="273.0" layoutY="173.0" prefHeight="236.0" prefWidth="629.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+            <Pane layoutX="27.0" layoutY="434.0" prefHeight="112.0" prefWidth="909.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="#d33333" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, to the text game world. Are you ready to take the challenge?" textAlignment="CENTER" wrappingWidth="601.13671875">
+                  <Text fill="WHITE" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You enter the dungeon. In front of you there are two paths. Which one do you pick?">
                      <font>
-                        <Font size="38.0" />
+                        <Font size="19.0" />
                      </font>
                   </Text>
-               </children>
-            </Pane>
+               </children></Pane>
+            <Button layoutX="315.0" layoutY="587.0" mnemonicParsing="false" onAction="#switchRoom1" prefHeight="62.0" prefWidth="158.0" text="Left">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button layoutX="491.0" layoutY="587.0" mnemonicParsing="false" onAction="#switchRoom2" prefHeight="62.0" prefWidth="158.0" text="Right">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button disable="true" layoutX="991.0" layoutY="419.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="158.0" text="Fight!">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </children>

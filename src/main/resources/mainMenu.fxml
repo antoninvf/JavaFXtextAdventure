@@ -41,13 +41,13 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.gui.MenuController">
+<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.logic.Controller">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Quit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
             </menus>
@@ -74,6 +74,11 @@
                   <Font size="25.0" />
                </font>
             </Button>
+            <Text fill="#949494" layoutX="458.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i'm really uncreative" textAlignment="CENTER" wrappingWidth="258.13671875">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Text>
             </children>
         </AnchorPane>
     </children>

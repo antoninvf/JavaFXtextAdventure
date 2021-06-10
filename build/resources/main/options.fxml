@@ -41,13 +41,14 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.gui.MenuController">
+<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.logic.Controller">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Quit" />
+                  <MenuItem mnemonicParsing="false" onAction="#returnToMenu" text="Return to Main Menu" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
             </menus>
@@ -59,7 +60,7 @@
                   <Font name="Times New Roman" size="96.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="267.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i just wanted an options button, it looked cool :D" textAlignment="CENTER" wrappingWidth="641.13671875">
+            <Text fill="WHITE" layoutX="267.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i just wanted an options button, it looked cool :D" textAlignment="CENTER" wrappingWidth="641.13671875">
                <font>
                   <Font size="19.0" />
                </font>

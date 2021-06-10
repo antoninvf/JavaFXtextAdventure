@@ -12,6 +12,7 @@ import java.util.Objects;
 public class Game extends Application {
 
     public static Stage stage;
+    public static double adventurerHP = 100;
 
     @Override
     public void start(Stage primaryStage) throws IOException {

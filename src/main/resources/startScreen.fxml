@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -43,25 +42,25 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.gui.RoomController">
+<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.logic.Controller">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Quit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="897.0" style="-fx-background-color: #1c1c1c;" VBox.vgrow="ALWAYS">
             <children>
-            <Button layoutX="390.0" layoutY="556.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="395.0" text="Enter the Dungeon">
+            <Button layoutX="390.0" layoutY="472.0" mnemonicParsing="false" onAction="#enterDungeon" prefHeight="52.0" prefWidth="395.0" text="Enter the Dungeon">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button layoutX="390.0" layoutY="621.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="395.0" text="Return to Main Menu">
+            <Button layoutX="390.0" layoutY="537.0" mnemonicParsing="false" onAction="#returnToMenu" prefHeight="52.0" prefWidth="395.0" text="Return to Main Menu">
                <font>
                   <Font size="25.0" />
                </font>
@@ -75,27 +74,13 @@
                   </Text>
                </children>
             </Pane>
-            <Pane layoutX="273.0" layoutY="89.0" prefHeight="236.0" prefWidth="629.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+            <Pane layoutX="273.0" layoutY="173.0" prefHeight="236.0" prefWidth="629.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="#d33333" layoutX="17.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, to the text game world. Please enter your character name and press enter, to enter the dungeon of skeletons." textAlignment="CENTER" wrappingWidth="594.13671875">
+                  <Text fill="#d33333" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, to the text game world. Are you ready to take the challenge?" textAlignment="CENTER" wrappingWidth="601.13671875">
                      <font>
                         <Font size="38.0" />
                      </font>
                   </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="334.0" layoutY="339.0" prefHeight="202.0" prefWidth="508.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
-               <children>
-                  <Text fill="WHITE" layoutX="61.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adventurer Name:">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Text>
-                  <TextField layoutX="74.0" layoutY="120.0" prefHeight="42.0" prefWidth="360.0" promptText="Adventurer">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </TextField>
                </children>
             </Pane>
             </children>
