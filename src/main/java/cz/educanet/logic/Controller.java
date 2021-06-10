@@ -108,9 +108,13 @@ public class Controller {
         hpBar.setProgress(Game.adventurerHP);
     }
 
-    public void ramIntoDoor(ActionEvent event) {
+    public void ramIntoDoor(ActionEvent event) throws IOException {
         leftIdiotButton.setDisable(true);
         hpBar.setProgress((Game.adventurerHP / 100) - 0.25);
+        Game.adventurerHP = Game.adventurerHP - 25;
+        if(Game.adventurerHP < 0) {
+            gameOver(event);
+        }
         roomText.setText("What?.. You just rammed straight into the boarded up door..\nYou didn't even achieve anything, you just hurt yourself.");
     }
 

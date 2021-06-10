@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.logic.Controller">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Options">
+                    <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="897.0" style="-fx-background-color: #1c1c1c;" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutX="27.0" layoutY="84.0" prefHeight="335.0" prefWidth="909.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <ImageView fitHeight="320.0" fitWidth="481.0" layoutX="214.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/rooms/room1.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="fuckingskelly" layoutX="318.0" layoutY="6.0" prefHeight="326.0" prefWidth="263.0">
+                     <children>
+                        <ImageView fitHeight="320.0" fitWidth="481.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/enemies/skeleton.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children></Pane>
+                <Pane layoutX="985.0" layoutY="201.0" prefHeight="170.0" prefWidth="170.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <ImageView fitHeight="170.0" fitWidth="170.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@img/adventurer.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+                <ProgressBar fx:id="hpBar" layoutX="893.0" layoutY="274.0" prefHeight="25.0" prefWidth="177.0" progress="1.0" rotate="-90.0" />
+                <Line endX="-100.0" endY="642.0" layoutX="1052.0" layoutY="26.0" startX="-100.0" stroke="#2a2a2a" />
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="308.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <Text fill="#d33333" layoutX="6.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skeleton Fight" textAlignment="CENTER" wrappingWidth="295.13671875">
+                     <font>
+                        <Font name="Times New Roman" size="38.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="27.0" layoutY="434.0" prefHeight="112.0" prefWidth="909.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
+               <children>
+                  <Text fx:id="roomText" fill="WHITE" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You go left. In front of you there is a Skeleton waiting for you to fight.">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Button fx:id="fightButton" layoutX="991.0" layoutY="419.0" mnemonicParsing="false" onAction="#fight" prefHeight="62.0" prefWidth="158.0" text="Fight!">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button fx:id="proceedButton" disable="true" layoutX="403.0" layoutY="585.0" mnemonicParsing="false" onAction="#switchRoom3" prefHeight="62.0" prefWidth="158.0" text="Proceed">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
