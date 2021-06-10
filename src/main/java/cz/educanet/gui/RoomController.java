@@ -6,10 +6,4 @@ import javafx.scene.control.Button;
 
 public class RoomController {
 
-    @FXML
-    private Button button;
-
-    public void onClicked(ActionEvent actionEvent) {
-        button.setText("Drz hubu!!!");
-    }
 }
