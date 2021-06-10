@@ -41,35 +41,31 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.gui.MenuController">
+<VBox prefHeight="720.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.educanet.gui.MenuController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Quit" />
+                  <MenuItem mnemonicParsing="false" onAction="#returnToMenu" text="Return to Main Menu" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="897.0" style="-fx-background-color: #1c1c1c;" VBox.vgrow="ALWAYS">
             <children>
-            <Text fill="#d33333" layoutX="349.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE TEXT GAME" textAlignment="CENTER" wrappingWidth="477.13671875">
+            <Text fill="#d33333" layoutX="267.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sorry but, there are no options :/" textAlignment="CENTER" wrappingWidth="641.13671875">
                <font>
                   <Font name="Times New Roman" size="96.0" />
                </font>
             </Text>
-            <Button fx:id="buttonStart" onAction="#onClickedStart" layoutX="390.0" layoutY="365.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="395.0" text="Start New Game">
+            <Text fill="WHITE" layoutX="267.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i just wanted an options button, it looked cool :D" textAlignment="CENTER" wrappingWidth="641.13671875">
                <font>
-                  <Font size="25.0" />
+                  <Font size="19.0" />
                </font>
-            </Button>
-            <Button fx:id="buttonOptions" onAction="#onClickedOptions" layoutX="391.0" layoutY="433.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="395.0" text="Options">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
-            <Button fx:id="buttonExit" onAction="#onClickedExit" layoutX="391.0" layoutY="501.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="395.0" text="Exit">
+            </Text>
+            <Button fx:id="buttonOptions" layoutX="390.0" layoutY="521.0" mnemonicParsing="false" onAction="#returnToMenu" prefHeight="52.0" prefWidth="395.0" text="Return to Main Menu">
                <font>
                   <Font size="25.0" />
                </font>

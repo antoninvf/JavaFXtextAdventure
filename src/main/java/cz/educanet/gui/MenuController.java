@@ -18,26 +18,28 @@ public class MenuController {
     private Scene scene;
     private Parent root;
 
-    @FXML
-    private Button buttonStart;
-    @FXML
-    private Button buttonOptions;
-    @FXML
-    private Button buttonExit;
-
     // Main Menu
     public void onClickedStart(ActionEvent event) throws IOException {
         switchScene(event, "/rooms/room0.fxml");
     }
 
     public void onClickedOptions(ActionEvent event) throws IOException {
-        switchScene(event, "/rooms/options.fxml");
+        switchScene(event, "/options.fxml");
     }
 
     public void onClickedExit(ActionEvent event) {
         System.exit(0);
     }
 
+    // Options
+    public void returnToMenu(ActionEvent event) throws IOException {
+        switchScene(event, "/mainMenu.fxml");
+    }
+
+    // Character screen
+
+
+    // Scene Switcher
     public void switchScene(ActionEvent event, String file) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(file)));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -46,12 +48,4 @@ public class MenuController {
         stage.setScene(scene);
         stage.show();
     }
-
-    // Options
-
-    public void returnToMenu(ActionEvent event) throws IOException {
-        switchScene(event, "/mainMenu.fxml");
-    }
-
-    // Character screen
 }

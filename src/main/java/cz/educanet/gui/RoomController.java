@@ -6,4 +6,9 @@ import javafx.scene.control.Button;
 
 public class RoomController {
 
+    // Menubar exit
+    public void onClickedExit(ActionEvent event) {
+        System.exit(0);
+    }
+
 }
