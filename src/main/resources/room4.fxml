@@ -80,7 +80,7 @@
                 <Line endX="-100.0" endY="642.0" layoutX="1052.0" layoutY="26.0" startX="-100.0" stroke="#2a2a2a" />
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="308.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 3px;">
                <children>
-                  <Text fill="#d33333" layoutX="6.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boarded up" textAlignment="CENTER" wrappingWidth="295.13671875">
+                  <Text fill="#d33333" layoutX="6.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lava Room" textAlignment="CENTER" wrappingWidth="295.13671875">
                      <font>
                         <Font name="Times New Roman" size="38.0" />
                      </font>

@@ -52,7 +52,6 @@
             <menus>
                 <Menu mnemonicParsing="false" text="Options">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#returnToMenu" text="Return to Main Menu" />
                   <MenuItem mnemonicParsing="false" onAction="#onClickedExit" text="Quit" />
                     </items>
                 </Menu>
